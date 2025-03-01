@@ -4,9 +4,18 @@ require_once '../config/db.php';
 require_once '../libs/jwt.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
-$token = $_SERVER['HTTP_AUTHORIZATION'] ?? '';
+
+// Enhanced token retrieval
+$headers = getallheaders(); // More reliable than $_SERVER for some setups
+$token = $headers['Authorization'] ?? $_SERVER['HTTP_AUTHORIZATION'] ?? '';
 $userId = verifyJWT(str_replace('Bearer ', '', $token));
 
+// Debug (optional, remove in production)
+if (!$token) {
+    file_put_contents('debug.log', "No token received\n", FILE_APPEND);
+}
+
+// Authorization check
 if (!$userId) {
     http_response_code(401);
     echo json_encode(['error' => 'Unauthorized']);
