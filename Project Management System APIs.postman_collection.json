@@ -6,6 +6,13 @@
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "32336121"
 	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost/project-management-system/api",
+			"type": "string"
+		}
+	],
 	"item": [
 		{
 			"name": "Register User",
@@ -14,7 +21,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"register\": true, \"email\": \"test@example.com\", \"password\": \"123456\"}",
+					"raw": "{\"register\": true, \"email\": \"anntreesa028@gmail.com\", \"password\": \"123456\"}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -22,7 +29,9 @@
 					}
 				},
 				"url": {
-					"raw": ""
+					"raw": "{{baseUrl}}/auth",
+					"host": ["{{baseUrl}}"],
+					"path": ["auth"]
 				}
 			},
 			"response": []
@@ -34,7 +43,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"login\": true, \"email\": \"test@example.com\", \"password\": \"123456\"}",
+					"raw": "{\"login\": true, \"email\": \"anntreesa028@gmail.com\", \"password\": \"123456\"}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -42,7 +51,9 @@
 					}
 				},
 				"url": {
-					"raw": ""
+					"raw": "{{baseUrl}}/auth",
+					"host": ["{{baseUrl}}"],
+					"path": ["auth"]
 				}
 			},
 			"response": []
@@ -59,7 +70,9 @@
 					}
 				],
 				"url": {
-					"raw": ""
+					"raw": "{{baseUrl}}/projects",
+					"host": ["{{baseUrl}}"],
+					"path": ["projects"]
 				}
 			},
 			"response": []
@@ -85,7 +98,9 @@
 					}
 				},
 				"url": {
-					"raw": ""
+					"raw": "{{baseUrl}}/projects",
+					"host": ["{{baseUrl}}"],
+					"path": ["projects"]
 				}
 			},
 			"response": []
@@ -111,7 +126,9 @@
 					}
 				},
 				"url": {
-					"raw": ""
+					"raw": "{{baseUrl}}/projects",
+					"host": ["{{baseUrl}}"],
+					"path": ["projects"]
 				}
 			},
 			"response": []
@@ -137,7 +154,9 @@
 					}
 				},
 				"url": {
-					"raw": ""
+					"raw": "{{baseUrl}}/projects",
+					"host": ["{{baseUrl}}"],
+					"path": ["projects"]
 				}
 			},
 			"response": []
@@ -163,7 +182,9 @@
 					}
 				},
 				"url": {
-					"raw": ""
+					"raw": "{{baseUrl}}/tasks",
+					"host": ["{{baseUrl}}"],
+					"path": ["tasks"]
 				}
 			},
 			"response": []
@@ -189,7 +210,9 @@
 					}
 				},
 				"url": {
-					"raw": ""
+					"raw": "{{baseUrl}}/tasks",
+					"host": ["{{baseUrl}}"],
+					"path": ["tasks"]
 				}
 			},
 			"response": []
@@ -215,7 +238,9 @@
 					}
 				},
 				"url": {
-					"raw": ""
+					"raw": "{{baseUrl}}/tasks",
+					"host": ["{{baseUrl}}"],
+					"path": ["tasks"]
 				}
 			},
 			"response": []
@@ -241,7 +266,9 @@
 					}
 				},
 				"url": {
-					"raw": ""
+					"raw": "{{baseUrl}}/tasks",
+					"host": ["{{baseUrl}}"],
+					"path": ["tasks"]
 				}
 			},
 			"response": []
@@ -258,7 +285,9 @@
 					}
 				],
 				"url": {
-					"raw": ""
+					"raw": "{{baseUrl}}/tasks",
+					"host": ["{{baseUrl}}"],
+					"path": ["tasks"]
 				}
 			},
 			"response": []
